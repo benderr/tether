@@ -22,7 +22,7 @@ function getScrollParent(el) {
     }
 
     const {overflow, overflowX, overflowY} = style;
-    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
+    if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
       if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
         return parent;
       }
